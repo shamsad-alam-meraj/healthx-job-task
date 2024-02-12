@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../styles/Header.css";
+import "../../styles/HeaderStyle.css";
 import {
   faSearch,
   faRetweet,
@@ -43,7 +43,10 @@ const HeaderNavigation = () => {
           </div>
           <div className="search-button">
             <button onClick={handleSearch}>
-              <FontAwesomeIcon icon={faSearch} style={{ color: "white" }} />
+              <FontAwesomeIcon
+                icon={faSearch}
+                style={{ color: "white", fontSize: "20px" }}
+              />
             </button>
           </div>
         </div>

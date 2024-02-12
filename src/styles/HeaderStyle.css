@@ -32,7 +32,7 @@
   border: 1px solid #ccc; /* Add border to search bar */
   border-radius: 5px;
   padding: 5px; /* Adjust padding as needed */
-  width: 700px;
+  width: 80%;
 }
 
 .search-input {

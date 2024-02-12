@@ -1,0 +1,13 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  
+}
+.menu-container {
+  width: 20%;
+}
+.other-menu-container{
+  display: flex;
+}
