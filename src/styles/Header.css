@@ -31,7 +31,7 @@
   align-items: center;
   border: 1px solid #ccc; /* Add border to search bar */
   border-radius: 5px;
-  padding: 2px; /* Adjust padding as needed */
+  padding: 5px; /* Adjust padding as needed */
   width: 700px;
 }
 
@@ -85,11 +85,25 @@
   background-color: #007bff;
   color: #fff;
   border-radius: 50%;
-  padding: 2px 4px;
-  font-size: 9px;
+  padding: 2px 6px;
+  font-size: 10px;
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.badge-button {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+
+.badge-button2 {
+  border: none;
+  background-color: transparent;
 }
 
 .account {
@@ -99,20 +113,18 @@
 }
 
 .label {
-  margin-right: 10px;
+  font-weight: 700;
 }
 
 .currency-total {
   margin-left: 10px;
+  font-weight: 700;
 }
 
 .profile-icon {
   background: none;
   border: none;
   cursor: pointer;
-}
-.badge-button {
-  position: relative;
 }
 
 /* Mobile Responsive Styles */

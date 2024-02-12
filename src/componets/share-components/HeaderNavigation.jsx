@@ -75,7 +75,7 @@ const HeaderNavigation = () => {
           <button className="profile-icon">
             <FontAwesomeIcon
               icon={faUser}
-              style={{ color: "black", fontSize: "20px" }}
+              style={{ color: "#007bff", fontSize: "20px" }}
             />
           </button>
           <span className="currency-total">$100.00</span>
