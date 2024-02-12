@@ -1,8 +1,8 @@
-import { baseUrl } from "config/apiUrl";
 import SuperFetch from "../config/SuperFetch";
+import { baseUrl } from "../config/apiUrl";
 
 const Product = {
-  productList: () => {
+  getProductList: () => {
     return SuperFetch(`${baseUrl.product}/products`);
   },
 };
