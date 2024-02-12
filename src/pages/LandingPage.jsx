@@ -1,11 +1,13 @@
-import BannerContent from "../componets/pages-components/Landing/SubHeaderContent";
-import HeaderNavigation from "../componets/share-components/HeaderNavigation";
+import BannerContent from "../components/pages-components/Landing/SubHeaderContent";
+import HeaderNavigation from "../components/share-components/HeaderNavigation";
+import ProductWithFacilites from "../components/pages-components/Landing/ProductWithFacilites";
 
 const LandingPage = () => {
   return (
     <>
       <HeaderNavigation />
       <BannerContent />
+      <ProductWithFacilites />
     </>
   );
 };
