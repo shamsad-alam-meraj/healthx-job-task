@@ -3,11 +3,28 @@
   align-items: center;
   height: 50px;
   width: 100%;
-  
 }
 .menu-container {
   width: 20%;
-}
-.other-menu-container{
   display: flex;
+  align-items: center;
+}
+.menu-label {
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 20px;
+}
+.other-menu-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.list-item {
+  padding: 30px;
+  color: #fff;
+}
+.drawer-container {
+}
+.drawer-list {
 }
