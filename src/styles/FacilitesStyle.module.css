@@ -3,3 +3,36 @@
   flex-direction: column;
   margin-bottom: 10px;
 }
+.facility-container {
+  border: 1px solid whitesmoke;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  padding: 0 20px;
+}
+.image-style {
+  width: 100px;
+  height: 50px;
+}
+.description-container {
+  padding: 0 10px;
+}
+.title-style {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+.subtitle-style {
+  font-size: 15px;
+  font-weight: 500;
+  color: gray;
+}

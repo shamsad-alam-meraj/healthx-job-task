@@ -1,11 +1,12 @@
 .product_facilites {
   display: flex;
   width: 100%;
+  margin-top: 10px;
 }
 .facilities-container {
-  width: 30%;
+  width: 20%;
   margin-right: 40px;
 }
 .products-container {
-  width: 68%;
+  width: 79%;
 }
