@@ -23,10 +23,10 @@ export const facilities = [
     title: "Easy Returns",
     subtitle: "Within 30 days",
   },
-  {
-    id: 5,
-    imageSrc: "https://i.ibb.co/6ZwB9s5/ontime-delivery.png",
-    title: "Ontime Delivery",
-    subtitle: "Get Product on time",
-  },
+  // {
+  //   id: 5,
+  //   imageSrc: "https://i.ibb.co/6ZwB9s5/ontime-delivery.png",
+  //   title: "Ontime Delivery",
+  //   subtitle: "Get Product on time",
+  // },
 ];

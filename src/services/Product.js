@@ -2,8 +2,10 @@ import SuperFetch from "../config/SuperFetch";
 import { baseUrl } from "../config/apiUrl";
 
 const Product = {
-  getProductList: () => {
-    return SuperFetch(`${baseUrl.product}/products`);
+  getProductList: (skip = 0, limit = 4) => {
+    return SuperFetch(
+      `${baseUrl.product}/products?skip=${skip}&limit=${limit}`
+    );
   },
 };
 
