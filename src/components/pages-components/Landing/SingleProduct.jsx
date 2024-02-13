@@ -15,6 +15,7 @@ const SingleProduct = ({
       <div className={styles["image-container"]}>
         <img className={styles["image-style"]} src={productImage} alt="" />
       </div>
+      <div className={styles['show-percentage']}>{"-"}{discountPercentage}%</div>
       {/* description section  */}
       <div className={styles["description-section"]}>
         <p className={styles["product-title"]}>{title}</p>
