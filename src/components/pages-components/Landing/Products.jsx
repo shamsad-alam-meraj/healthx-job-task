@@ -22,7 +22,7 @@ const Products = () => {
   return (
     <div className={styles["products-container"]}>
       <div className={styles["title-container"]}>
-        <p className={styles["title-style"]}>Featured Items</p>
+        <p className={styles["title-style"]}>Featured Item</p>
         <div className={styles["icons-container"]}>
           <p
             onClick={() => {

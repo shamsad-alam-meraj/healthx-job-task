@@ -6,6 +6,7 @@ export const offers = [
     title: "Get the best gadgets",
     src: "https://i.ibb.co/3cMBdM7/gadget.png",
     buttonLabel: "Buy now",
+    type: "buy"
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const offers = [
     title: "Buy all in package",
     src: "https://i.ibb.co/HtVQPXq/bundle.png",
     buttonLabel: "See All",
+    type: "list"
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const offers = [
     title: "Last chance to save big",
     src: "https://i.ibb.co/CtStbXs/valentine.png",
     buttonLabel: "Buy Now",
+    type: "buy"
   },
   {
     id: 4,
@@ -30,5 +33,6 @@ export const offers = [
     title: "Exclusive products",
     src: "https://i.ibb.co/T0PhShh/relax-chair.png",
     buttonLabel: "Buy Now",
+    type: "buy"
   },
 ];

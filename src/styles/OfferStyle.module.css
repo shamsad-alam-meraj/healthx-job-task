@@ -1,0 +1,25 @@
+.offers-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px 0;
+}
+.offer-container {
+  height: 200px;
+  background-color: rgba(184, 23, 23, 0.12);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 0;
+}
+.image-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-style {
+  width: 150px;
+  height: 150px;
+}
