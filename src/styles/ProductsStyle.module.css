@@ -64,14 +64,14 @@
 }
 .cart-item {
   background-color: white;
-  padding: 10px;
+  padding: 5px 10px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 .cart-item-selected {
   background-color: #007bff;
   color: white;
-  padding: 10px;
+  padding: 5px 10px;
   margin-bottom: 10px;
   border-radius: 5px;
 }

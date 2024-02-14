@@ -1,4 +1,8 @@
 .main-container {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: 0px 80px;
+}
+@media (max-width: 768px) {
+  .main-container {
+    padding-left: 0 10px;
+  }
 }

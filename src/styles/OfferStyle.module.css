@@ -6,7 +6,7 @@
   margin: 20px 0;
 }
 .offer-container {
-  position: relative; /* Ensure relative positioning for pseudo-element */
+  position: relative;
   height: 200px;
   background-color: rgba(23, 184, 130, 0.12);
   border-radius: 20px;
