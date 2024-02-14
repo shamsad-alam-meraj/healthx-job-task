@@ -7,13 +7,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const HeaderNavigation = () => {
+  const shoppingCart = useSelector((state) => state.cart.items);
+  console.log(shoppingCart);
+  let amount = 0;
+  shoppingCart.forEach((product) => {
+    amount =
+      amount +
+      parseFloat(
+        product?.price - (product?.price * product?.discountPercentage) / 100
+      );
+  });
   const [searchText, setSearchText] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
 
   const handleSearch = () => {
-    // Handle search functionality here
     console.log("Search clicked!");
   };
   return (
@@ -71,7 +81,7 @@ const HeaderNavigation = () => {
               style={{ color: "black", fontSize: "20px" }}
             />
           </button>
-          <span className="badge">5</span>
+          <span className="badge">{shoppingCart?.length ?? 0}</span>
         </div>
         <div className="account">
           <span className="label">Account</span>
@@ -81,7 +91,7 @@ const HeaderNavigation = () => {
               style={{ color: "#007bff", fontSize: "20px" }}
             />
           </button>
-          <span className="currency-total">$100.00</span>
+          <span className="currency-total">${amount.toFixed(2) ?? 0}</span>
         </div>
       </div>
     </header>

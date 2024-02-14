@@ -66,6 +66,7 @@ const Products = () => {
                   stock={product?.stock}
                   rating={product?.rating}
                   discountPercentage={product?.discountPercentage}
+                  product={product}
                 ></SingleProduct>
               );
             })

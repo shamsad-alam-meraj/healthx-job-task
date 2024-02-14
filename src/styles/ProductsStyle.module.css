@@ -67,6 +67,13 @@
   margin-bottom: 10px;
   border-radius: 5px;
 }
+.cart-item-selected{
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
 .image-container {
   width: 100%;
   height: 300px;

@@ -4,6 +4,9 @@ import styles from "../../../styles/ProductsStyle.module.css";
 import { Rating } from "react-simple-star-rating";
 import { faBagShopping, faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { productAddToCart } from "../../../helpers/shoppingCart";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../../../redux/Container/cartSlice";
 
 const SingleProduct = ({
   title,
@@ -12,7 +15,11 @@ const SingleProduct = ({
   stock,
   rating,
   discountPercentage,
+  product,
 }) => {
+  const selectedProduct = useSelector((state) => state.cart.items);
+  const dispatch = useDispatch();
+  const productSelect = selectedProduct.find((pro) => pro.id === product.id);
   return (
     <div className={styles["product-container"]}>
       <div className={styles["image-container"]}>
@@ -22,11 +29,27 @@ const SingleProduct = ({
         {"-"}
         {discountPercentage}%
       </div>
-      <div className={styles["cart-container"]}>
-        <div className={styles["cart-item"]}>
+      <div className={styles[`cart-container`]}>
+        <div
+          onClick={() => {
+            if (productAddToCart(product)) {
+              dispatch(addToCart(product));
+            } else {
+              dispatch(removeFromCart(product));
+            }
+          }}
+          className={
+            productSelect?.id === product?.id
+              ? styles["cart-item-selected"]
+              : styles["cart-item"]
+          }
+        >
           <FontAwesomeIcon
             icon={faBagShopping}
-            style={{ color: "black", fontSize: "15px" }}
+            style={{
+              color: productSelect?.id === product?.id ? "white" : "black",
+              fontSize: "15px",
+            }}
           />
         </div>
         <div className={styles["cart-item"]}>
