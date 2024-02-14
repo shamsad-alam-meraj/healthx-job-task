@@ -10,6 +10,7 @@
 }
 .icons-container {
   display: flex;
+  margin-right: 10px;
 }
 .title-style {
   font-size: 20px;
@@ -67,7 +68,7 @@
   margin-bottom: 10px;
   border-radius: 5px;
 }
-.cart-item-selected{
+.cart-item-selected {
   background-color: #007bff;
   color: white;
   padding: 10px;

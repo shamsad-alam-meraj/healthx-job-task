@@ -6,13 +6,28 @@
   margin: 20px 0;
 }
 .offer-container {
+  position: relative; /* Ensure relative positioning for pseudo-element */
   height: 200px;
-  background-color: rgba(184, 23, 23, 0.12);
+  background-color: rgba(23, 184, 130, 0.12);
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0px 0;
+  overflow: hidden;
 }
+
+.offer-container::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -50px;
+  width: calc(30%);
+  height: calc(40%);
+  border: 20px solid rgb(89, 168, 178, 0.2);
+  border-radius: 50%;
+  z-index: -100;
+}
+
 .description-container {
   display: flex;
   flex-direction: column;

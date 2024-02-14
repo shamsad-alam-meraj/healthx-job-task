@@ -6,9 +6,10 @@ const Offers = () => {
   return (
     <div className={styles["offers-container"]}>
       {offerList?.length > 0 &&
-        offerList.map((offer) => {
+        offerList.map((offer, index) => {
           return (
             <SingleOffer
+              index={index}
               key={offer?.id}
               offerName={offer.offerName}
               imageSrc={offer.src}

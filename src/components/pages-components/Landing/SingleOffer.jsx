@@ -8,12 +8,19 @@ const SingleOffer = ({
   offerAmount,
   buttonLabel,
   type,
+  index,
 }) => {
+  console.log(index);
   return (
     <div className={styles["offer-container"]}>
       <div className={styles["description-container"]}>
         <p className={styles["name-style"]}>{offerName}</p>
         <p className={styles["headline-style"]}>{offerAmount}</p>
+        {/* {index / 2 === 0 ? (
+          <div className={styles["even-ring"]}></div>
+        ) : (
+          <div className={styles["odd-ring"]}></div>
+        )} */}
         <button className={styles["btn-style"]}>
           {type === "buy" && (
             <span className={styles["icon-style"]}>
