@@ -12,16 +12,16 @@ const SingleOffer = ({
   return (
     <div className={styles["offer-container"]}>
       <div className={styles["description-container"]}>
-        <p className={styles["name-container"]}>{offerName}</p>
-        <p className={styles["headline-container"]}>{offerAmount}</p>
+        <p className={styles["name-style"]}>{offerName}</p>
+        <p className={styles["headline-style"]}>{offerAmount}</p>
         <button className={styles["btn-style"]}>
           {type === "buy" && (
-            <span className={styles['icon-style']}>
+            <span className={styles["icon-style"]}>
               <FontAwesomeIcon
                 icon={faBagShopping}
                 style={{
                   color: "red",
-                  fontSize: "12px",
+                  fontSize: "15px",
                 }}
               />
             </span>

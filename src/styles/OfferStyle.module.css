@@ -13,13 +13,44 @@
   grid-template-columns: 1fr 1fr;
   padding: 0px 0;
 }
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.name-style {
+  line-height: 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+.headline-style {
+  line-height: 0px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.btn-style {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  color: red;
+}
+.icon-style {
+  margin-right: 10px;
+}
+.btn-label-style {
+  font-size: 15px;
+}
 .image-container {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 5px;
 }
 .image-style {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
 }
