@@ -1,7 +1,13 @@
 .banner-sidebar-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 20px 0;
+  gap: 20px;
 }
 .sidebar-container {
+  /* border: 1px solid rgb(213, 213, 213); */
 }
 .banner-container {
-  background-color: #1d7bdf6d;
+  background-color: #b8daff8e;
+  border-radius: 20px;
 }
