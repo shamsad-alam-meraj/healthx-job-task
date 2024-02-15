@@ -26,7 +26,7 @@ const Products = () => {
           <p
             onClick={() => {
               if (skip > 0) {
-                setSkip((skip) => skip - 1);
+                setSkip((skip) => skip - 4);
               }
             }}
             className={styles[`single-icon`]}
@@ -40,7 +40,7 @@ const Products = () => {
             />
           </p>
           <p
-            onClick={() => setSkip((skip) => skip + 1)}
+            onClick={() => setSkip((skip) => skip + 4)}
             className={styles[`single-icon right-arrow`]}
           >
             <FontAwesomeIcon

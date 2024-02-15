@@ -27,6 +27,7 @@
 }
 .product-container {
   position: relative;
+  max-height: 300px;
 }
 .show-percentage {
   position: absolute;
@@ -92,7 +93,7 @@
   padding: 0 10px;
 }
 .product-title {
-  font-size: 20px;
+  font: 1em sans-serif;
   font-weight: 700;
   color: black;
   line-height: 0;
