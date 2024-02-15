@@ -1,1 +1,1 @@
-### Live Site Link - [Heathx Task](https://master--healthxtask.netlify.app/)
+### Live Site Link - [Heathx Task](https://healthxtask.netlify.app/)
