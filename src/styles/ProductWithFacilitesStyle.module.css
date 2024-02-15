@@ -5,10 +5,14 @@
   margin-top: 20px;
   gap: 20px;
 }
-/* .facilities-container {
-  width: 20%;
-  margin-right: 40px;
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .product_facilites {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+  }
 }
-.products-container {
-  width: 79%;
-} */

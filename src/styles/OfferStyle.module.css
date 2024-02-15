@@ -111,3 +111,14 @@
   width: 160px;
   height: 160px;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .offers-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+  }
+}

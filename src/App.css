@@ -1,8 +1,9 @@
 .main-container {
   padding: 0px 50px;
 }
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .main-container {
-    padding-left: 0 10px;
+    padding: 0px 5px;
   }
 }

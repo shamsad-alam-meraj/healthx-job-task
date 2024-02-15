@@ -4,3 +4,9 @@
   border-radius: 5px;
   height: 50px;
 }
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .sub-header-content {
+    display: none;
+  }
+}
