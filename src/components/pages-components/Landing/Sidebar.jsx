@@ -9,7 +9,7 @@ const Sidebar = () => {
         <span>
           <FontAwesomeIcon
             icon={faAngleRight}
-            style={{ color: "#007bff", fontSize: "14px" }}
+            style={{ color: "#007bff", fontSize: "14px", fontWeight: "bold" }}
           />
         </span>
       </li>

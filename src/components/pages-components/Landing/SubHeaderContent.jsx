@@ -3,7 +3,7 @@ import styles from "../../../styles/SubHeaderContentStyle.module.css";
 
 const BannerContent = () => {
   return (
-    <div className={styles["banner-content"]}>
+    <div className={styles["sub-header-content"]}>
       <SubHeader />
     </div>
   );
