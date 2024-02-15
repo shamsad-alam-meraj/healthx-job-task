@@ -1,6 +1,6 @@
-# HealthX Ecommerce Project
+# Task - ReactJS
 
-This project is an ecommerce website developed as a job task for the Associate Software Engineer position at HealthX. It includes various features to enhance user experience and functionality.
+This project is an ecommerce website developed as a job task for the Associate Software Engineer position at Healthx BD. It includes various features to enhance user experience and functionality.
 
 ## Features
 
