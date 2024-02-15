@@ -10,7 +10,6 @@ const SingleOffer = ({
   type,
   index,
 }) => {
-  console.log(index);
   return (
     <div
       className={

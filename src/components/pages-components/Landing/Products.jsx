@@ -11,7 +11,6 @@ const Products = () => {
 
   useEffect(() => {
     const getProductList = async () => {
-      console.log(skip);
       let response = await Product.getProductList(skip);
       if (response.status === 200) {
         setProductList(response?.products);

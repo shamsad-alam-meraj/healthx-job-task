@@ -1,7 +1,6 @@
 import styles from "../../../styles/FacilitesStyle.module.css"
 // eslint-disable-next-line react/prop-types
 const SingleFacilities = ({ imageSrc, title, subtitle }) => {
-  console.log(imageSrc);
   return (
     <div className={styles["facility-container"]}>
       <div className={styles['image-container']}>

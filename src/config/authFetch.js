@@ -54,7 +54,6 @@ export default async (url, optionsProps = {}) => {
 			status: e.response.status,
 			...e.response.data,
 		};
-		console.log("---AUTH ERROR---", e);
 		throw e;
 		// console.log("---AUTH ERROR---", e);
 		// return e.response;

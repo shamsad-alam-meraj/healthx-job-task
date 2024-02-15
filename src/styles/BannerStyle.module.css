@@ -47,6 +47,7 @@
 .image-style {
   height: 100%;
 }
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .banner-content {
@@ -55,21 +56,32 @@
     width: 100%;
     margin-top: 20px;
     gap: 20px;
+    grid-auto-flow: column;
+  }
+  .main-details-container {
+    padding-left: 10px;
+  }
+  .subheader-style {
+    line-height: 0;
+    font-weight: 500;
+    font: 0.5em sans-serif;
+    margin-bottom: 10px;
   }
   .percentage-style {
-    font-size: 14px;
+    font-size: 12px;
     color: #007bff;
     font-weight: 700;
+    line-height: 0;
   }
   .headline-style {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1;
   }
   .btn-style {
     border-radius: 3px;
-    padding: 5px 2px;
-    font-size: 14px;
+    padding: 5px 8px;
+    font-size: 10px;
   }
   .image-container {
     height: 200px;

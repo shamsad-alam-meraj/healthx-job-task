@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 
 const HeaderNavigation = () => {
   const shoppingCart = useSelector((state) => state.cart.items);
-  console.log(shoppingCart);
   let amount = 0;
   shoppingCart.forEach((product) => {
     amount =
