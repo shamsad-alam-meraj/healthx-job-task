@@ -5,10 +5,30 @@
   grid-gap: 10px;
   margin: 20px 0;
 }
-.offer-container {
+.offer-container-1 {
   position: relative;
   height: 200px;
-  background-color: rgba(23, 184, 130, 0.12);
+  background-color: #8ab9ec64;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 0;
+  overflow: hidden;
+}
+.offer-container-2 {
+  position: relative;
+  height: 200px;
+  background-color: #e0ee8252;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 0;
+  overflow: hidden;
+}
+.offer-container-3 {
+  position: relative;
+  height: 200px;
+  background-color: #f19b8d70;
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,14 +36,36 @@
   overflow: hidden;
 }
 
-.offer-container::before {
+.offer-container-1::before {
   content: "";
   position: absolute;
   top: 0px;
   right: -50px;
   width: calc(30%);
   height: calc(40%);
-  border: 20px solid rgb(89, 168, 178, 0.2);
+  border: 20px solid #0678f1d0;
+  border-radius: 50%;
+  z-index: -100;
+}
+.offer-container-2::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -50px;
+  width: calc(30%);
+  height: calc(40%);
+  border: 20px solid #a7a402;
+  border-radius: 50%;
+  z-index: -100;
+}
+.offer-container-3::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -50px;
+  width: calc(30%);
+  height: calc(40%);
+  border: 20px solid #f82302;
   border-radius: 50%;
   z-index: -100;
 }

@@ -12,7 +12,17 @@ const SingleOffer = ({
 }) => {
   console.log(index);
   return (
-    <div className={styles["offer-container"]}>
+    <div
+      className={
+        index == 0
+          ? styles["offer-container-1"]
+          : index === 1
+          ? styles["offer-container-2"]
+          : index === 2
+          ? styles["offer-container-1"]
+          : styles["offer-container-3"]
+      }
+    >
       <div className={styles["description-container"]}>
         <p className={styles["name-style"]}>{offerName}</p>
         <p className={styles["headline-style"]}>{offerAmount}</p>
