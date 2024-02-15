@@ -26,6 +26,7 @@ const HeaderNavigation = () => {
   const handleSearch = () => {
     console.log("Search clicked!");
   };
+
   return (
     <header className="header">
       <div className="logo-container">
@@ -33,65 +34,69 @@ const HeaderNavigation = () => {
           <img src="/assets/images/company_logo.png" alt="Company Logo" />
         </div>
       </div>
-      <div className="searchbar-container">
-        <div className="searchbar">
-          <div className="search-input">
-            <input
-              type="text"
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
-              placeholder="Search For Products"
-            />
+      <div className="searchbar-header-right">
+        <div className="searchbar-container">
+          <div className="searchbar">
+            <div className="search-input">
+              <input
+                type="text"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                placeholder="Search For Products"
+              />
+            </div>
+            <div className="category-dropdown">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+              >
+                <option>All Categories</option>
+              </select>
+            </div>
+            <div className="search-button">
+              <button onClick={handleSearch}>
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  style={{ color: "white", fontSize: "20px" }}
+                />
+              </button>
+            </div>
           </div>
-          <div className="category-dropdown">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-            >
-              <option>All Categories</option>
-            </select>
-          </div>
-          <div className="search-button">
-            <button onClick={handleSearch}>
+        </div>
+        <div className="header-right">
+          <div className="icons-container">
+            <button className="icon-button">
               <FontAwesomeIcon
-                icon={faSearch}
-                style={{ color: "white", fontSize: "20px" }}
+                icon={faRetweet}
+                style={{ color: "black", fontSize: "20px" }}
               />
             </button>
+            <button className="icon-button">
+              <FontAwesomeIcon
+                icon={faHeart}
+                style={{ color: "black", fontSize: "20px" }}
+              />
+            </button>
+            <div className="icon-button badge-button">
+              <button className="badge-button2">
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  style={{ color: "black", fontSize: "20px" }}
+                />
+              </button>
+              <span className="badge">{shoppingCart?.length ?? 0}</span>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="header-right">
-        <button className="icon-button">
-          <FontAwesomeIcon
-            icon={faRetweet}
-            style={{ color: "black", fontSize: "20px" }}
-          />
-        </button>
-        <button className="icon-button">
-          <FontAwesomeIcon
-            icon={faHeart}
-            style={{ color: "black", fontSize: "20px" }}
-          />
-        </button>
-        <div className="icon-button badge-button">
-          <button className="badge-button2">
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ color: "black", fontSize: "20px" }}
-            />
-          </button>
-          <span className="badge">{shoppingCart?.length ?? 0}</span>
-        </div>
-        <div className="account">
-          <span className="label">Account</span>
-          <button className="profile-icon">
-            <FontAwesomeIcon
-              icon={faUser}
-              style={{ color: "#007bff", fontSize: "20px" }}
-            />
-          </button>
-          <span className="currency-total">${amount.toFixed(2) ?? 0}</span>
+          <div className="account">
+            <button className="profile-icon">
+              <span className="label">Account</span>
+              <FontAwesomeIcon
+                icon={faUser}
+                style={{ color: "#007bff", fontSize: "20px" }}
+              />
+            </button>
+            <span className="currency-total">${amount.toFixed(2) ?? 0}</span>
+          </div>
         </div>
       </div>
     </header>
