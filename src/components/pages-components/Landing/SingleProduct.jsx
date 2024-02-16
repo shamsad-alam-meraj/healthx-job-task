@@ -2,11 +2,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../../styles/ProductsStyle.module.css";
 import { Rating } from "react-simple-star-rating";
-import { faBagShopping, faRetweet } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBagShopping,
+  faEye,
+  faRetweet,
+} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { productAddToCart } from "../../../helpers/shoppingCart";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../../redux/Container/cartSlice";
+import { useState } from "react";
+import Modal from "../../share-components/Modal";
 
 const SingleProduct = ({
   title,
@@ -17,9 +23,14 @@ const SingleProduct = ({
   discountPercentage,
   product,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [productDetails, setProducDetails] = useState({});
   const selectedProduct = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const productSelect = selectedProduct.find((pro) => pro.id === product.id);
+  const onClose = () => {
+    setIsOpen(false);
+  };
   return (
     <div className={styles["product-container"]}>
       <div className={styles["image-container"]}>
@@ -64,7 +75,18 @@ const SingleProduct = ({
             style={{ color: "black", fontSize: "15px" }}
           />
         </div>
-        {/* <div></div> */}
+        <div
+          onClick={() => {
+            setProducDetails(product);
+            setIsOpen(true);
+          }}
+          className={styles["cart-item"]}
+        >
+          <FontAwesomeIcon
+            icon={faEye}
+            style={{ color: "black", fontSize: "15px" }}
+          />
+        </div>
       </div>
       {/* description section  */}
       <div className={styles["description-section"]}>
@@ -91,7 +113,11 @@ const SingleProduct = ({
           <p className={styles["original-price"]}>{price}</p>
         </div>
       </div>
+      <Modal isOpen={isOpen} onClose={onClose} productDetails={productDetails}/>
     </div>
   );
 };
 export default SingleProduct;
+
+
+
