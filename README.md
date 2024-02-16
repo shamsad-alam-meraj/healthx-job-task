@@ -1,4 +1,4 @@
-# Task - ReactJS
+# Task - React.js
 
 This project is an e-commerce website developed as a job task for the Associate Software Engineer position at Healthx BD. It includes various features to enhance user experience and functionality.
 
@@ -8,7 +8,7 @@ This project is an e-commerce website developed as a job task for the Associate 
 - **Product List Functionality**: The project includes a product listing feature with several functionalities:
   - **Add to Cart**: Users can add products to their shopping cart for purchase.
   - **Add to Favorite**: Users have the option to mark products as favorites for quick access later.
-  - **Retweet**: Users can share tweet on products.
+  - **Retweet**: Users can tweet on products.
   - **Product Details Popup**: Users can click on an eye icon to view product details in a popup without leaving the product listing page.
    - **Pagination**: Products are displayed with pagination to improve navigation and performance.
 
