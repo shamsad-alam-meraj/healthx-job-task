@@ -129,13 +129,23 @@
   display: flex;
   align-items: center;
 }
+.menu-icon-mobile {
+  display: none;
+}
+.mobile-menu-contents {
+  display: none;
+}
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 30px;
+  }
+  .menu-icon-mobile {
+    display: block;
   }
   .logo img {
     width: 100px;
@@ -143,5 +153,65 @@
   }
   .searchbar-header-right {
     display: none;
+  }
+  .container-for-responsive {
+    position: relative;
+  }
+  .mobile-menu-contents {
+    display: block;
+    position: absolute;
+    top: 12;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.808);
+    border-radius: 10px;
+  }
+  .searchbar {
+    margin: 10px;
+  }
+  .other-menu-container {
+    padding: 10px;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .list-item {
+    color: white;
+    font-weight: 500;
+  }
+  .mobile-icon-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+  }
+  .mobile-icon-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .mobile-badge-button {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    z-index: 100;
+  }
+  .mobile-badge-button2 {
+    border: none;
+    background-color: transparent;
+  }
+  .mobile-badge {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 14px;
+    z-index: 100;
   }
 }
