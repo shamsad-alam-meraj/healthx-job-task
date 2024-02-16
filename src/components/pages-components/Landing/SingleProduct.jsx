@@ -10,9 +10,16 @@ import {
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { productAddToCart } from "../../../helpers/shoppingCart";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeFromCart } from "../../../redux/Container/cartSlice";
+import {
+  addToCart,
+  addToFavourite,
+  removeFromCart,
+  removeFromFavourite,
+} from "../../../redux/Container/cartSlice";
 import { useState } from "react";
 import Modal from "../../share-components/Modal";
+import { toast } from "react-toastify";
+import { productAddToFavouriteList } from "../../../helpers/favouriteProduct";
 
 const SingleProduct = ({
   title,
@@ -26,8 +33,15 @@ const SingleProduct = ({
   const [isOpen, setIsOpen] = useState(false);
   const [productDetails, setProducDetails] = useState({});
   const selectedProduct = useSelector((state) => state.cart.items);
+  const favouriteProduct = useSelector((state) => state.cart.favourites);
   const dispatch = useDispatch();
   const productSelect = selectedProduct.find((pro) => pro.id === product.id);
+  const favouriteSelect = favouriteProduct.find((pro) => pro.id === product.id);
+  console.log({
+    favouriteSelect: favouriteSelect,
+    favouriteProduct: favouriteProduct,
+  });
+
   const onClose = () => {
     setIsOpen(false);
   };
@@ -63,10 +77,25 @@ const SingleProduct = ({
             }}
           />
         </div>
-        <div className={styles["cart-item"]}>
+        <div
+          onClick={() => {
+            if (productAddToFavouriteList(product)) {
+              dispatch(addToFavourite(product));
+              toast.success("Product saved to Favourite!");
+            } else {
+              dispatch(removeFromFavourite(product));
+              toast.error("Product removed from Favourite!");
+            }
+          }}
+          className={
+            favouriteSelect?.id === product?.id
+              ? styles["cart-item-selected"]
+              : styles["cart-item"]
+          }
+        >
           <FontAwesomeIcon
             icon={faHeart}
-            style={{ color: "black", fontSize: "15px" }}
+            style={{ color: favouriteSelect?.id === product?.id ? "white" : "black", fontSize: "15px" }}
           />
         </div>
         <div className={styles["cart-item"]}>
@@ -113,11 +142,12 @@ const SingleProduct = ({
           <p className={styles["original-price"]}>{price}</p>
         </div>
       </div>
-      <Modal isOpen={isOpen} onClose={onClose} productDetails={productDetails}/>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        productDetails={productDetails}
+      />
     </div>
   );
 };
 export default SingleProduct;
-
-
-
