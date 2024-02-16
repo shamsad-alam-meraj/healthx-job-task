@@ -13,13 +13,16 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
   addToFavourite,
+  addToTweet,
   removeFromCart,
   removeFromFavourite,
+  removeFromTweet,
 } from "../../../redux/Container/cartSlice";
 import { useState } from "react";
 import Modal from "../../share-components/Modal";
 import { toast } from "react-toastify";
 import { productAddToFavouriteList } from "../../../helpers/favouriteProduct";
+import { productAddToTweet } from "../../../helpers/tweetProduct";
 
 const SingleProduct = ({
   title,
@@ -34,12 +37,14 @@ const SingleProduct = ({
   const [productDetails, setProducDetails] = useState({});
   const selectedProduct = useSelector((state) => state.cart.items);
   const favouriteProduct = useSelector((state) => state.cart.favourites);
+  const tweetProduct = useSelector((state) => state.cart.tweets);
   const dispatch = useDispatch();
   const productSelect = selectedProduct.find((pro) => pro.id === product.id);
   const favouriteSelect = favouriteProduct.find((pro) => pro.id === product.id);
+  const tweetSelect = tweetProduct.find((pro) => pro.id === product.id);
   console.log({
-    favouriteSelect: favouriteSelect,
-    favouriteProduct: favouriteProduct,
+    favouriteSelect: tweetSelect,
+    favouriteProduct: tweetSelect,
   });
 
   const onClose = () => {
@@ -95,13 +100,32 @@ const SingleProduct = ({
         >
           <FontAwesomeIcon
             icon={faHeart}
-            style={{ color: favouriteSelect?.id === product?.id ? "white" : "black", fontSize: "15px" }}
+            style={{
+              color: favouriteSelect?.id === product?.id ? "white" : "black",
+              fontSize: "15px",
+            }}
           />
         </div>
-        <div className={styles["cart-item"]}>
+        <div
+          onClick={() => {
+            if (productAddToTweet(product)) {
+              dispatch(addToTweet(product));
+            } else {
+              dispatch(removeFromTweet(product));
+            }
+          }}
+          className={
+            tweetSelect?.id === product?.id
+              ? styles["cart-item-selected"]
+              : styles["cart-item"]
+          }
+        >
           <FontAwesomeIcon
             icon={faRetweet}
-            style={{ color: "black", fontSize: "15px" }}
+            style={{
+              color: tweetSelect?.id === product?.id ? "white" : "black",
+              fontSize: "15px",
+            }}
           />
         </div>
         <div
@@ -109,11 +133,13 @@ const SingleProduct = ({
             setProducDetails(product);
             setIsOpen(true);
           }}
-          className={styles["cart-item"]}
+          className={
+            isOpen ? styles["cart-item-selected"] : styles["cart-item"]
+          }
         >
           <FontAwesomeIcon
             icon={faEye}
-            style={{ color: "black", fontSize: "15px" }}
+            style={{ color: isOpen ? "white" : "black", fontSize: "15px" }}
           />
         </div>
       </div>
